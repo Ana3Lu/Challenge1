@@ -15,6 +15,9 @@
 ## 4. Configuración Experimental, Resultados y Análisis
 
 ## 5. Evaluación del Protocolo de Pruebas
+- Evaluación de la robustez del sistema frente a diferentes condiciones ambientales.
+- Identificación de mejoras en el proceso de pruebas.
+- Comparación de desempeño con expectativas iniciales.
 
 ## 6. Conclusiones, Retos y Mejoras Futuras
 
