@@ -16,11 +16,11 @@
 
 ## 5. Evaluación del Protocolo de Pruebas
 
-## 7. Conclusiones, Retos y Mejoras Futuras
+## 6. Conclusiones, Retos y Mejoras Futuras
 
-## 8. Referencias
+## 7. Referencias
 
-## 9. Anexos
+## 8. Anexos
 
 ```
 
