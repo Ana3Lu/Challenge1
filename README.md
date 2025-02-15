@@ -18,32 +18,32 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 La documentación se organiza en las siguientes secciones:
 </p>
 
-#### **2. Solución Propuesta**
+#### **[2. Solución Propuesta](#2-solución-propuesta)**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
 </p>
 
-#### **3. Configuración Experimental, Resultados y Análisis**
+#### **[3. Configuración Experimental, Resultados y Análisis](#3-configuración-experimental-resultados-y-análisis)**
 <p align="justify">
 Se detallan las pruebas realizadas para validar el funcionamiento del sistema, la evaluación del desempeño en diferentes condiciones ambientales y el análisis de los resultados obtenidos en comparación con las expectativas iniciales.
 </p>
 
-#### **4. Autoevaluación del Protocolo de Pruebas**
+#### **[4. Autoevaluación del Protocolo de Pruebas](#4-autoevaluación-del-protocolo-de-pruebas)**
 <p align="justify">
 Se evalúa la robustez del sistema frente a diferentes escenarios, se identifican mejoras en la metodología de pruebas y se analizan los aspectos críticos del protocolo de pruebas aplicado.
 </p>
 
-#### **5. Conclusiones, Retos y Trabajo Futuro**
+#### **[5. Conclusiones, Retos y Trabajo Futuro](#5-conclusiones-retos-y-trabajo-futuro)**
 <p align="justify">
 Se presentan los logros alcanzados, los desafíos encontrados durante el desarrollo del proyecto y las posibles mejoras para futuras implementaciones y escalabilidad del sistema.
 </p>
 
-#### **6. Referencias**
+#### **[6. Referencias](#6-referencias)**
 <p align="justify">
-Se listan las fuentes utilizadas en la investigación y desarrollo del sistema y del presente articulo.
+Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
 </p>
 
-#### **7. Anexos**
+#### **[7. Anexos](#7-anexos)**
 <p align="justify">
 Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así como material complementario relevante para la comprensión del proyecto.
 </p>
