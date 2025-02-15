@@ -104,7 +104,7 @@ El diseño del sistema IoT para la detección de incendios en los cerros orienta
 
 ---
 
-### **Estándares de Ingeniería Aplicados**
+***Estándares de Ingeniería Aplicados***
 
 Para garantizar la calidad, seguridad y efectividad del sistema, se han aplicado los siguientes estándares de ingeniería:
 
@@ -126,7 +126,7 @@ Para garantizar la calidad, seguridad y efectividad del sistema, se han aplicado
 
 ---
 
-### **Desarrollo Teórico Modular: Criterios de Diseño Establecidos**
+***Desarrollo Teórico Modular: Criterios de Diseño Establecidos***
 
 Para garantizar un diseño eficiente y funcional, se han definido los siguientes criterios de diseño:
 
