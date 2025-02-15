@@ -62,7 +62,7 @@ Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así
 
 ## Configuración Experimental, Resultados y Análisis
 
-## Evaluación del Protocolo de Pruebas
+## Autoevaluación del Protocolo de Pruebas
 - Evaluación de la robustez del sistema frente a diferentes condiciones ambientales.
 - Identificación de mejoras en el proceso de pruebas.
 - Comparación de desempeño con expectativas iniciales.
