@@ -1,5 +1,19 @@
 # Sistema IoT para Detección de Incendios en los Cerros Orientales de Bogotá - Challenge 1
 
+## **Información del Proyecto**
+- **Universidad:** [Nombre de la Universidad]  
+- **Facultad:** [Nombre de la Facultad]  
+- **Materia:** [Nombre de la Materia]  
+- **Profesor:** [Nombre del Profesor]  
+
+## **Integrantes del Proyecto**
+| Nombre | Correo Electrónico |
+|--------|-------------------|
+| [Nombre 1] | [correo1@ejemplo.com] |
+| [Nombre 2] | [correo2@ejemplo.com] |
+| [Nombre 3] | [correo3@ejemplo.com] |
+| [Nombre 4] | [correo4@ejemplo.com] |
+
 ## Introducción
 <p align="justify">
 Los cerros orientales de Bogotá son fundamentales para la regulación climática y la conservación de la biodiversidad. Su presencia como barrera y protector natural constituye un regulador del clima, del cual depende en buena medida la disponibilidad de agua para la capital y municipios aledaños [1]. Además, son esenciales en la producción de oxígeno en una sabana donde la pérdida de vegetación es creciente, lo que los hace aún más vulnerables a incendios forestales agravados por sequías prolongadas, altas temperaturas y la acumulación de material seco, junto con actividades humanas como fogatas, quemas agrícolas y expansión urbana descontrolada [2]. Un aumento repentino de temperatura, junto con la detección de llamas y gases como CO y CO₂, son indicadores clave de incendios. Implementar una solución basada en Internet de las Cosas que analice estos datos permitirá un monitoreo continuo y alertas tempranas, reduciendo la propagación del fuego y sus impactos negativos.
