@@ -5,11 +5,9 @@ Los cerros orientales de Bogotá son fundamentales para la regulación climátic
 
 ### Objetivos  
 
-El objetivo general de este trabajo es desarrollar un sistema IoT para la detección y monitoreo en tiempo real de incendios en los cerros orientales de Bogotá. Para ello, se plantean los siguientes objetivos específicos:  
-- Diseñar sensores que detecten variaciones significativas de temperatura, presencia de humo y concentración de gases como CO y CO₂.  
-- Implementar un sistema de comunicación en tiempo real que notifique a las autoridades locales ante una alerta de incendio.  
-- Evaluar el desempeño del sistema en diversas condiciones ambientales.
-- 
+El objetivo general de este trabajo es desarrollar un sistema IoT para la detección y monitoreo en tiempo real de incendios en los cerros orientales de Bogotá. Para ello, se plantearón los siguientes objetivos específicos:  
+
+ 
 ## 2. Solución Propuesta
 
 ## 3. Configuración Experimental, Resultados y Análisis
