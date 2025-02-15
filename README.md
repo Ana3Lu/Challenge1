@@ -1,15 +1,15 @@
 # Sistema IoT para Detección de Incendios en los Cerros Orientales de Bogotá - Challenge 1
 
-## **Información del Proyecto**
+### Información del Proyecto
 - **Universidad:** Universidad de La Sabana  
 - **Facultad:** Facultad de Ingeniería  
 - **Materia:** Internet de las Cosas  
 - **Profesor:** Juan Manuel Aranda López King  
 
-## **Integrantes del Proyecto**
+### Integrantes del Proyecto
 | Nombre | Correo Electrónico |
 |--------|-------------------|
-| [Mariana Valle Moreno] | [marianavamo@unisabana.edu.co] |
+| Mariana Valle Moreno | marianavamo@unisabana.edu.co |
 | [Nombre 2] | [correo2@ejemplo.com] |
 | [Nombre 3] | [correo3@ejemplo.com] |
 | [Nombre 4] | [correo4@ejemplo.com] |
