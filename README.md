@@ -17,6 +17,7 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 <p align="justify">
 La documentación se organiza en las siguientes secciones:
 </p>
+
 #### **2. Solución Propuesta**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
