@@ -73,7 +73,7 @@ Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así
 
 ## Solución Propuesta
 
-### **Restricciones de Diseño Identificadas**
+***Restricciones de Diseño Identificadas***
 
 El diseño del sistema IoT para la detección de incendios en los cerros orientales de Bogotá está sujeto a diversas restricciones que afectan su implementación. Estas restricciones se clasifican en diferentes categorías:
 
