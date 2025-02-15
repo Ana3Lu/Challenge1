@@ -12,7 +12,40 @@ Actualmente, la detección de incendios en los cerros orientales de Bogotá depe
 <p align="justify">
 Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detectan variaciones en temperatura, presencia de fuego y concentración de gases inflamables. La información recopilada es procesada por un Arduino Uno R3, que gestiona la activación de alertas mediante un zumbador activo, un LED RGB y un módulo LCD I2C para notificaciones en tiempo real. Gracias a su diseño compacto y autónomo, el sistema puede operar en entornos remotos sin depender de redes externas, lo que lo hace ideal para zonas con infraestructura de comunicación limitada.Con esta solución, se busca optimizar los tiempos de respuesta, reducir el impacto ambiental de los incendios y fortalecer las estrategias de prevención.
 </p>
+### Estructura de la Documentación
+<p align="justify">
+La documentación se organiza en las siguientes secciones:
+</p>
 
+### **2. Solución Propuesta**
+<p align="justify">
+Se describen las restricciones de diseño (técnicas, económicas, regulatorias, espaciales y temporales), la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
+</p>
+
+### **3. Configuración Experimental, Resultados y Análisis**
+<p align="justify">
+Se detallan las pruebas realizadas para validar el funcionamiento del sistema, la evaluación del desempeño en diferentes condiciones ambientales y el análisis de los resultados obtenidos en comparación con las expectativas iniciales.
+</p>
+
+### **4. Autoevaluación del Protocolo de Pruebas**
+<p align="justify">
+Se evalúa la robustez del sistema frente a diferentes escenarios, se identifican mejoras en la metodología de pruebas y se analizan los aspectos críticos del protocolo de pruebas aplicado.
+</p>
+
+### **5. Conclusiones, Retos y Trabajo Futuro**
+<p align="justify">
+Se presentan los logros alcanzados, los desafíos encontrados durante el desarrollo del proyecto y las posibles mejoras para futuras implementaciones y escalabilidad del sistema.
+</p>
+
+### **6. Referencias**
+<p align="justify">
+Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
+</p>
+
+### **7. Anexos**
+<p align="justify">
+Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así como material complementario relevante para la comprensión del proyecto.
+</p>
 ## 2. Solución Propuesta
 
 ## 3. Configuración Experimental, Resultados y Análisis
