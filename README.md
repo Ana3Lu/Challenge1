@@ -18,6 +18,16 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 La documentación se organiza en las siguientes secciones:
 </p>
 
+#### **[Introducción](#introducción)**
+<p align="justify">
+Se describe la importancia de los cerros orientales de Bogotá en la regulación climática y la biodiversidad. Además, se presentan los factores que han incrementado la vulnerabilidad de estos ecosistemas ante incendios forestales, destacando la necesidad de un sistema de detección temprana basado en Internet de las Cosas (IoT).
+</p>
+
+#### **[Motivación y Justificación](#motivación-y-justificación)**
+<p align="justify">
+Se explica la problemática actual en la detección de incendios forestales, resaltando las deficiencias de los métodos tradicionales como la vigilancia manual. Se justifica el uso de una solución IoT para optimizar los tiempos de respuesta y mitigar el impacto ambiental.
+</p>
+
 #### **[Solución Propuesta](#solución-propuesta)**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
