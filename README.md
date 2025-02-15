@@ -12,7 +12,6 @@
 | Mariana Valle Moreno | marianavamo@unisabana.edu.co |
 | [Nombre 2] | [correo2@ejemplo.com] |
 | [Nombre 3] | [correo3@ejemplo.com] |
-| [Nombre 4] | [correo4@ejemplo.com] |
 
 ## Introducción
 <p align="justify">
