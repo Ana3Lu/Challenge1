@@ -31,27 +31,27 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 La documentación se organiza en las siguientes secciones:
 </p>
 
-#### **[Introducción](#introducción)**
+#### **[Introducción](#introduccion)**
 <p align="justify">
 Se destaca la importancia de los cerros orientales de Bogotá en el clima y la biodiversidad, así como su creciente vulnerabilidad a incendios, justificando la necesidad de un sistema IoT para detección temprana.
 </p>
 
-#### **[Motivación y Justificación](#motivación-y-justificación)**
+#### **[Motivacion y Justificacion](#motivacion-y-justificacion)**
 <p align="justify">
 Se analizan las limitaciones de los métodos tradicionales de detección de incendios y se justifica el uso de IoT para mejorar la respuesta y reducir el impacto ambiental.
 </p>
 
-#### **[Solución Propuesta](#solución-propuesta)**
+#### **[Solucion Propuesta](#solucion-propuesta)**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
 </p>
 
-#### **[Configuración Experimental, Resultados y Análisis](#configuración-experimental-resultados-y-análisis)**
+#### **[Configuracion Experimental, Resultados y Analisis](#configuracion-experimental-resultados-y-analisis)**
 <p align="justify">
 Se detallan las pruebas realizadas para validar el funcionamiento del sistema, la evaluación del desempeño en diferentes condiciones ambientales y el análisis de los resultados obtenidos en comparación con las expectativas iniciales.
 </p>
 
-#### **[Autoevaluación del Protocolo de Pruebas](#autoevaluación-del-protocolo-de-pruebas)**
+#### **[Autoevaluacion del Protocolo de Pruebas](#autoevaluacion-del-protocolo-de-pruebas)**
 <p align="justify">
 Se evalúa la robustez del sistema frente a diferentes escenarios, se identifican mejoras en la metodología de pruebas y se analizan los aspectos críticos del protocolo de pruebas aplicado.
 </p>
