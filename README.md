@@ -31,27 +31,27 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 La documentación se organiza en las siguientes secciones:
 </p>
 
-#### **[Introducción](#introducción)**
+#### **[Introducción](#introduccion)**
 <p align="justify">
 Se destaca la importancia de los cerros orientales de Bogotá en el clima y la biodiversidad, así como su creciente vulnerabilidad a incendios, justificando la necesidad de un sistema IoT para detección temprana.
 </p>
 
-#### **[Motivación y Justificación](#motivación-y-justificación)**
+#### **[Motivación y Justificación](#motivacion-y-justificacion)**
 <p align="justify">
 Se analizan las limitaciones de los métodos tradicionales de detección de incendios y se justifica el uso de IoT para mejorar la respuesta y reducir el impacto ambiental.
 </p>
 
-#### **[Solución Propuesta](#solución-propuesta)**
+#### **[Solución Propuesta](#solucion-propuesta)**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
 </p>
 
-#### **[Configuración Experimental, Resultados y Análisis](#configuración-experimental-resultados-y-análisis)**
+#### **[Configuración Experimental, Resultados y Análisis](#configuracion-experimental-resultados-y-analisis)**
 <p align="justify">
 Se detallan las pruebas realizadas para validar el funcionamiento del sistema, la evaluación del desempeño en diferentes condiciones ambientales y el análisis de los resultados obtenidos en comparación con las expectativas iniciales.
 </p>
 
-#### **[Autoevaluación del Protocolo de Pruebas](#autoevaluación-del-protocolo-de-pruebas)**
+#### **[Autoevaluación del Protocolo de Pruebas](#autoevaluacion-del-protocolo-de-pruebas)**
 <p align="justify">
 Se evalúa la robustez del sistema frente a diferentes escenarios, se identifican mejoras en la metodología de pruebas y se analizan los aspectos críticos del protocolo de pruebas aplicado.
 </p>
@@ -61,7 +61,7 @@ Se evalúa la robustez del sistema frente a diferentes escenarios, se identifica
 Se presentan los logros alcanzados, los desafíos encontrados durante el desarrollo del proyecto y las posibles mejoras para futuras implementaciones y escalabilidad del sistema.
 </p>
 
-## **[Referencias](#referencias)**
+#### **[Referencias](#referencias)**
 <p align="justify">
 Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
 </p>
@@ -70,7 +70,6 @@ Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
 <p align="justify">
 Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así como material complementario relevante para la comprensión del proyecto.
 </p>
-
 
 ## Solución Propuesta
 
