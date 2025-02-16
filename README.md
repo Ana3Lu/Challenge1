@@ -13,8 +13,6 @@
 | Valentina Alejandra López Romero | valentinalopro@unisabana.edu.co |
 | [Nombre 3] | [correo3@ejemplo.com] |
 
----
-
 ## Estructura de la Documentación
 - [1. Introducción](#1-introducción)
 - [2. Motivación y Justificación](#2-motivación-y-justificación)
