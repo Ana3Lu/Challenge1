@@ -33,12 +33,12 @@ La documentación se organiza en las siguientes secciones:
 
 #### **[Introducción](#introducción)**
 <p align="justify">
-Se describe la importancia de los cerros orientales de Bogotá en la regulación climática y la biodiversidad. Además, se presentan los factores que han incrementado la vulnerabilidad de estos ecosistemas ante incendios forestales, destacando la necesidad de un sistema de detección temprana basado en Internet de las Cosas (IoT).
+Se destaca la importancia de los cerros orientales de Bogotá en el clima y la biodiversidad, así como su creciente vulnerabilidad a incendios, justificando la necesidad de un sistema IoT para detección temprana.
 </p>
 
 #### **[Motivación y Justificación](#motivación-y-justificación)**
 <p align="justify">
-Se explica la problemática actual en la detección de incendios forestales, resaltando las deficiencias de los métodos tradicionales como la vigilancia manual. Se justifica el uso de una solución IoT para optimizar los tiempos de respuesta y mitigar el impacto ambiental.
+Se analizan las limitaciones de los métodos tradicionales de detección de incendios y se justifica el uso de IoT para mejorar la respuesta y reducir el impacto ambiental.
 </p>
 
 #### **[Solución Propuesta](#solución-propuesta)**
