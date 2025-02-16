@@ -31,27 +31,27 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 La documentación se organiza en las siguientes secciones:
 </p>
 
-#### **[Introducción](#introduccion)**
+#### **[Introducción](#introducción)**
 <p align="justify">
 Se destaca la importancia de los cerros orientales de Bogotá en el clima y la biodiversidad, así como su creciente vulnerabilidad a incendios, justificando la necesidad de un sistema IoT para detección temprana.
 </p>
 
-#### **[Motivacion y Justificacion](#motivacion-y-justificacion)**
+#### **[Motivación y Justificación](#motivación-y-justificación)**
 <p align="justify">
 Se analizan las limitaciones de los métodos tradicionales de detección de incendios y se justifica el uso de IoT para mejorar la respuesta y reducir el impacto ambiental.
 </p>
 
-#### **[Solucion Propuesta](#solucion-propuesta)**
+#### **[Solución Propuesta](#solución-propuesta)**
 <p align="justify">
 Se describen las restricciones de diseño, la arquitectura del sistema mediante un diagrama de bloques y el desarrollo modular de la solución, incluyendo diagramas UML y esquemáticos de hardware.
 </p>
 
-#### **[Configuracion Experimental, Resultados y Analisis](#configuracion-experimental-resultados-y-analisis)**
+#### **[Configuración Experimental, Resultados y Análisis](#configuración-experimental-resultados-y-análisis)**
 <p align="justify">
 Se detallan las pruebas realizadas para validar el funcionamiento del sistema, la evaluación del desempeño en diferentes condiciones ambientales y el análisis de los resultados obtenidos en comparación con las expectativas iniciales.
 </p>
 
-#### **[Autoevaluacion del Protocolo de Pruebas](#autoevaluacion-del-protocolo-de-pruebas)**
+#### **[Autoevaluación del Protocolo de Pruebas](#autoevaluación-del-protocolo-de-pruebas)**
 <p align="justify">
 Se evalúa la robustez del sistema frente a diferentes escenarios, se identifican mejoras en la metodología de pruebas y se analizan los aspectos críticos del protocolo de pruebas aplicado.
 </p>
@@ -70,6 +70,7 @@ Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
 <p align="justify">
 Incluye el código fuente documentado, los esquemáticos eléctricos y PCB, así como material complementario relevante para la comprensión del proyecto.
 </p>
+
 
 ## Solución Propuesta
 
