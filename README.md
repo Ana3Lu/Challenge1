@@ -61,7 +61,7 @@ Se evalúa la robustez del sistema frente a diferentes escenarios, se identifica
 Se presentan los logros alcanzados, los desafíos encontrados durante el desarrollo del proyecto y las posibles mejoras para futuras implementaciones y escalabilidad del sistema.
 </p>
 
-#### **[Referencias](#referencias)**
+## **[Referencias](#referencias)**
 <p align="justify">
 Se listan las fuentes utilizadas en la investigación y desarrollo del sistema.
 </p>
