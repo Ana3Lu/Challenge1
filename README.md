@@ -44,80 +44,83 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 
 ## 3. Solución Propuesta
 
-***Restricciones de Diseño Identificadas***
+### Restricciones de Diseño Identificadas
 
-El diseño del sistema IoT para la detección de incendios en los cerros orientales de Bogotá está sujeto a diversas restricciones que afectan su implementación. Estas restricciones se clasifican en diferentes categorías:
+Al desarrollar el sistema IoT para detectar incendios en los cerros orientales de Bogotá, se identificaron varias restricciones que afectan su diseño e implementación:
 
-1. **Técnicas**  
-   - Uso de un **Arduino Uno R3**, que tiene limitaciones de procesamiento y memoria, restringiendo la cantidad de sensores y el tipo de algoritmos que se pueden ejecutar.  
-   - Los sensores seleccionados (DS18B20, MQ-2 y sensor de llama) tienen rangos de medición específicos y requieren calibración para minimizar falsos positivos.  
-   - La alimentación debe ser autónoma (baterías o panel solar) para operar en zonas sin acceso a la red eléctrica.  
+### 1. Técnicas
+- Se usa un **Arduino Uno R3**, que tiene recursos limitados de procesamiento y memoria, por lo que solo se pueden conectar ciertos sensores y usar algoritmos simples.
+- Los sensores **DS18B20 (temperatura), MQ-2 (gases) y sensor de llama** requieren calibración para evitar falsas alarmas.
+- La alimentación del sistema debe ser autónoma (batería o panel solar) para funcionar sin conexión a la red eléctrica.
 
-2. **Económicas**  
-   - Se busca minimizar costos utilizando componentes accesibles y ampliamente disponibles en el mercado.  
-   - Se prioriza el uso de sensores de bajo costo en lugar de tecnologías más avanzadas (como cámaras térmicas).  
+### 2. Económicas
+- Se busca minimizar costos, eligiendo sensores asequibles y fáciles de conseguir.
+- No se usan tecnologías más avanzadas, como cámaras térmicas, debido a su alto precio.
 
-3. **Regulatorias**  
-   - El dispositivo debe cumplir con las normativas ambientales y de seguridad eléctrica para su implementación en áreas naturales protegidas.  
-   - La instalación de equipos en los cerros debe alinearse con regulaciones locales de conservación ambiental.  
+### 3. Regulatorias
+- Se debe cumplir con normativas ambientales y de seguridad eléctrica para su instalación en áreas protegidas.
+- Cualquier intervención en los cerros debe ajustarse a regulaciones locales.
 
-4. **Espaciales**  
-   - El sistema debe ser compacto y resistente a condiciones ambientales adversas (lluvia, humedad y polvo).  
-   - Se debe considerar la ubicación estratégica de los sensores para maximizar la detección sin afectar la fauna o flora del área.  
+### 4. Espaciales
+- El sistema debe ser compacto y resistente a condiciones climáticas adversas (lluvia, humedad y polvo).
+- Los sensores deben ubicarse en puntos estratégicos para maximizar su efectividad sin afectar el ecosistema.
 
-5. **Escalabilidad**  
-   - Aunque el prototipo se diseña para una zona específica, debe permitir la integración con sistemas más grandes en caso de futuras expansiones.  
-   - Se contempla la posibilidad de agregar más sensores en versiones futuras.  
+### 5. Escalabilidad
+- Aunque es un prototipo, debe permitir mejoras o expansión en el futuro.
+- Se deja la opción de agregar más sensores o conectividad remota en versiones posteriores.
 
-6. **Temporales**  
-   - El sistema debe procesar datos en tiempo real para garantizar una detección oportuna.  
-   - La autonomía del sistema debe permitir su funcionamiento continuo sin intervención frecuente para mantenimiento.  
-
-
-***Estándares de Ingeniería Aplicados***
-
-Para garantizar la calidad, seguridad y efectividad del sistema, se han aplicado los siguientes estándares de ingeniería:
-
-1. **Normas de Sensores y Electrónica**  
-   - **IEEE 1451**: Define estándares para la interoperabilidad de sensores y dispositivos de medición en sistemas IoT.  
-   - **ISO 9001**: Se sigue un enfoque estructurado de desarrollo para asegurar la calidad del diseño y la fabricación del prototipo.  
-
-2. **Seguridad y Medio Ambiente**  
-   - **ISO 14001**: Consideraciones ambientales en el diseño y operación del sistema para minimizar el impacto ecológico.  
-   - **IEC 60529 (IP Rating)**: Evaluación de la resistencia a polvo y agua para la protección del hardware en exteriores.  
-
-3. **Protocolos de Diseño Electrónico**  
-   - **IPC-2221**: Normativa para el diseño de circuitos electrónicos, asegurando la confiabilidad y seguridad del hardware.  
-   - **IEC 61000-4-2**: Protección contra descargas electrostáticas en entornos donde pueda haber interferencias electromagnéticas.  
-
-4. **Estándares de Programación y Software**  
-   - **ISO/IEC 25010**: Estándar para evaluar la calidad del software en términos de desempeño, confiabilidad y mantenibilidad.  
-   - **Arduino Coding Standards**: Buenas prácticas para la programación en C/C++ en microcontroladores Arduino.  
+### 6. Temporales
+- El sistema debe operar en **tiempo real** para detectar incendios lo más rápido posible.
+- Debe ser **autónomo y de bajo mantenimiento**, funcionando sin intervención constante.
 
 
-***Desarrollo Teórico Modular: Criterios de Diseño Establecidos***
 
-Para garantizar un diseño eficiente y funcional, se han definido los siguientes criterios de diseño:
+## Estándares de Ingeniería Aplicados
 
-1. **Fiabilidad y Precisión**  
-   - Selección de sensores con alta sensibilidad y precisión en la detección de temperatura, gases y llamas.  
-   - Implementación de algoritmos de calibración y filtrado de datos para minimizar falsas alarmas.  
+Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido varios estándares de ingeniería:
 
-2. **Bajo Consumo Energético**  
-   - Uso de componentes de bajo consumo energético para prolongar la vida útil de la batería.  
-   - Implementación de modos de bajo consumo en el microcontrolador para optimizar la energía.  
+### 1. Sensores y Electrónica
+- **IEEE 1451**: Establece reglas para la interoperabilidad de sensores en sistemas IoT.
+- **ISO 9001**: Asegura un proceso estructurado y de calidad en el desarrollo del sistema.
 
-3. **Autonomía y Mantenimiento Reducido**  
-   - Sistema autónomo que no requiere conexión a redes externas para operar.  
-   - Diseño resistente a condiciones ambientales adversas para minimizar la necesidad de mantenimiento frecuente.  
+### 2. Seguridad y Medio Ambiente
+- **ISO 14001**: Busca reducir el impacto ambiental del sistema.
+- **IEC 60529 (IP Rating)**: Evalúa qué tan resistente es el hardware al agua y al polvo.
 
-4. **Interfaz de Usuario Intuitiva**  
-   - Uso de un LCD I2C para visualización clara de los datos en tiempo real.  
-   - Incorporación de alarmas visuales (LED RGB) y sonoras (zumbador activo) para alertas inmediatas.  
+### 3. Diseño Electrónico
+- **IPC-2221**: Define buenas prácticas para diseñar circuitos electrónicos.
+- **IEC 61000-4-2**: Asegura que el sistema resista descargas electrostáticas y no falle en entornos hostiles.
 
-5. **Escalabilidad y Modularidad**  
-   - Diseño modular que permite la integración de nuevos sensores o mejoras en futuras versiones.  
-   - Posibilidad de adaptación para conectividad remota en versiones futuras sin modificar la arquitectura base del sistema.
+### 4. Programación y Software
+- **ISO/IEC 25010**: Evalúa la calidad del software, incluyendo su desempeño y facilidad de mantenimiento.
+- **Arduino Coding Standards**: Buenas prácticas para escribir código limpio y eficiente en C/C++.
+
+
+
+## Desarrollo Teórico Modular: Criterios de Diseño Establecidos
+
+Para que el sistema sea eficiente y funcional, se definieron los siguientes criterios de diseño:
+
+### 1. Fiabilidad y Precisión
+- Se seleccionaron sensores que brindan datos confiables sobre temperatura, gases y llamas.
+- Se implementarán filtros para reducir errores y evitar falsas alarmas.
+
+### 2. Bajo Consumo Energético
+- Se usan componentes de **bajo consumo**, lo que permite un mayor tiempo de operación.
+- El microcontrolador puede entrar en **modo de bajo consumo** cuando no detecta peligro.
+
+### 3. Autonomía y Mantenimiento Reducido
+- El sistema es **autosuficiente**, sin necesidad de conexión a redes externas.
+- Su diseño es resistente a la intemperie, minimizando la necesidad de mantenimiento.
+
+### 4. Interfaz de Usuario Intuitiva
+- Se usa una **pantalla LCD I2C** para mostrar datos en tiempo real.
+- Se incluyen **alarmas sonoras (zumbador) y visuales (LED RGB)** para alertar sobre incendios.
+
+### 5. Escalabilidad y Modularidad
+- Se diseñó de forma **modular**, lo que facilita agregar nuevos sensores o funciones en el futuro.
+- En futuras versiones, se podría incluir conectividad remota para alertar a las autoridades de manera automática.
+
 
 ---
 
