@@ -124,10 +124,54 @@ Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido 
 ---
 
 ## 5. Autoevaluación del Protocolo de Pruebas
+<p align="justify">
+El sistema de detección de incendios fue sometido a una serie de pruebas en condiciones controladas para evaluar su precisión y capacidad de respuesta ante variaciones en temperatura, presencia de gases y detección de llamas. Estas pruebas permitieron identificar fortalezas y limitaciones en el desempeño del sistema, lo que facilitó la implementación de ajustes para mejorar su fiabilidad y reducir posibles falsas alarmas.
+</p>
+<p align="justify">
+Las pruebas de detección de llama consistieron en colocar un mechero a diferentes distancias del <strong>sensor de llama</strong> para determinar su rango efectivo. Se observó que la sensibilidad del sensor disminuye a medida que la distancia aumenta y que su precisión puede verse afectada por la intensidad de la luz ambiental. En cuanto al <strong>sensor de gas (MQ-2)</strong>, se evidenció que la detección era más eficiente cuando el mechero se activaba sin generar llama, ya que la combustión altera la concentración de gas en el ambiente, dificultando alcanzar los valores esperados para la activación de la alerta. Finalmente, el <strong>sensor de temperatura (DS18B20)</strong> mostró un incremento gradual en los valores detectados. Sin embargo, debido a la estabilidad del entorno de prueba, los cambios tardaban en alcanzar valores críticos, lo que podría impactar la detección temprana en un escenario real.
+</p>
 
-- Evaluación de la robustez del sistema frente a diferentes condiciones ambientales.
-- Identificación de mejoras en el proceso de pruebas.
-- Comparación de desempeño con expectativas iniciales.
+### Mejoras Identificadas en el Proceso de Pruebas**  
+
+- **Calibración de umbrales:**  
+  <p align="justify">
+  Durante las pruebas iniciales, los valores de detección de gas y temperatura no coincidían con los umbrales esperados. Se observó que, en algunos casos, la activación de la alerta demoraba demasiado o, por el contrario, se generaban falsas alarmas incluso sin encender el mechero. Para mitigar estos inconvenientes, se ajustaron los valores límite del <strong>sensor de gas</strong> y del <strong>sensor de temperatura</strong>, logrando una activación más precisa de las alarmas.
+  </p>
+
+- **Optimización de la pantalla LCD:**  
+  <p align="justify">
+  Inicialmente, la visibilidad de los valores en la pantalla LCD I2C se veía afectada por la iluminación ambiental. Para mejorar la legibilidad, se ajustó el brillo y el contraste de la pantalla, asegurando que los valores de los sensores fueran visibles en tiempo real y facilitando el monitoreo del sistema durante las pruebas.
+  </p>
+
+- **Condición dual para la alerta de incendio:**  
+  <p align="justify">
+  Se implementó una mejora en la lógica del sistema para que la alerta de incendio solo se active si al menos <strong>dos sensores detectan simultáneamente una condición de peligro</strong> (<strong>llama + gas</strong>, <strong>llama + temperatura alta</strong>). Además, se establecieron alertas individuales para cada sensor cuando superaban los valores críticos, proporcionando información clara a los usuarios a través de la pantalla LCD.
+  </p>
+
+- **Integración de un LED RGB para estado del sistema:**  
+  <p align="justify">
+  Se incorporó un LED RGB que permanece encendido en verde mientras el sistema detecta condiciones normales y cambia a rojo en caso de alerta de incendio, proporcionando una señal visual inmediata sobre el estado del sistema.
+  </p>
+
+### Comparación de Desempeño con Expectativas Iniciales
+<p align="justify">
+El desempeño del sistema se evaluó con base en los objetivos establecidos en la fase de diseño, asegurando que la detección de incendios y la activación de alertas ocurrieran dentro de un tiempo razonable y con la precisión esperada.
+</p>
+
+| **Parámetro**             | **Expectativa Inicial**                                     | **Resultado de Pruebas**  |
+|---------------------------|------------------------------------------------------------|---------------------------|
+| **Detección de llama**    | Alta precisión en distintas condiciones de iluminación    | Funcional en baja iluminación, con limitaciones en entornos muy brillantes |
+| **Detección de gas**      | Sensibilidad suficiente para detectar variaciones críticas | Eficiente, pero con mejor rendimiento cuando el mechero se activa sin llama |
+| **Detección de temperatura** | Identificación confiable de incrementos anómalos | Responde correctamente, pero con cambios graduales que pueden retrasar la alerta |
+| **Activación de alertas** | Generación de alarmas en situaciones de riesgo real       | Mejorada con la implementación de alertas combinadas para incendios |
+| **Fiabilidad del sistema** | Capacidad para reducir falsas alarmas                     | Ajustada con la calibración de umbrales y optimización de la lógica de detección |
+
+<p align="justify">
+Si bien el sistema mostró un desempeño adecuado en la mayoría de los casos, se identificaron algunas áreas de mejora. En particular, la <strong>detección de temperatura</strong> presentó un comportamiento más gradual, lo que podría impactar la rapidez con la que se identifica un incendio en desarrollo. Además, la <strong>detección de llama</strong> mostró sensibilidad a condiciones de iluminación intensa, lo que puede afectar su rendimiento en escenarios más dinámicos.
+</p>
+<p align="justify">
+Para mejorar la fiabilidad y precisión del sistema, se recomienda la implementación de un algoritmo de filtrado de datos que ajuste los umbrales de detección de manera dinámica y optimice la activación de alertas en función de las condiciones ambientales en tiempo real.
+</p>
 
 ---
 
