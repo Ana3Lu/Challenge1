@@ -48,78 +48,66 @@ Este proyecto integra un DS18B20, un sensor de llama y un MQ-2, los cuales detec
 
 Al desarrollar el sistema IoT para detectar incendios en los cerros orientales de Bogotá, se identificaron varias restricciones que afectan su diseño e implementación:
 
-### 1. Técnicas
+#### 1. Técnicas
 - Se usa un **Arduino Uno R3**, que tiene recursos limitados de procesamiento y memoria, por lo que solo se pueden conectar ciertos sensores y usar algoritmos simples.
-- Los sensores **DS18B20 (temperatura), MQ-2 (gases) y sensor de llama** requieren calibración para evitar falsas alarmas.
-- La alimentación del sistema debe ser autónoma (batería o panel solar) para funcionar sin conexión a la red eléctrica.
+- Los sensores **temperatura, MQ-2 (gases) y sensor de llama** requieren calibración para evitar falsas alarmas.
+- La alimentación del sistema debe ser autónoma para funcionar sin conexión a la red eléctrica.
 
-### 2. Económicas
+#### 2. Económicas
 - Se busca minimizar costos, eligiendo sensores asequibles y fáciles de conseguir.
-- No se usan tecnologías más avanzadas, como cámaras térmicas, debido a su alto precio.
+- No se usan tecnologías más avanzadas,debido a su alto precio.
 
-### 3. Regulatorias
+#### 3. Regulatorias
 - Se debe cumplir con normativas ambientales y de seguridad eléctrica para su instalación en áreas protegidas.
 - Cualquier intervención en los cerros debe ajustarse a regulaciones locales.
 
-### 4. Espaciales
+#### 4. Espaciales
 - El sistema debe ser compacto y resistente a condiciones climáticas adversas (lluvia, humedad y polvo).
 - Los sensores deben ubicarse en puntos estratégicos para maximizar su efectividad sin afectar el ecosistema.
 
-### 5. Escalabilidad
+#### 5. Escalabilidad
 - Aunque es un prototipo, debe permitir mejoras o expansión en el futuro.
 - Se deja la opción de agregar más sensores o conectividad remota en versiones posteriores.
 
-### 6. Temporales
+#### 6. Temporales
 - El sistema debe operar en **tiempo real** para detectar incendios lo más rápido posible.
 - Debe ser **autónomo y de bajo mantenimiento**, funcionando sin intervención constante.
 
 
 
-## Estándares de Ingeniería Aplicados
 
-Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido varios estándares de ingeniería:
-
-### 1. Sensores y Electrónica
-- **IEEE 1451**: Establece reglas para la interoperabilidad de sensores en sistemas IoT.
-- **ISO 9001**: Asegura un proceso estructurado y de calidad en el desarrollo del sistema.
-
-### 2. Seguridad y Medio Ambiente
-- **ISO 14001**: Busca reducir el impacto ambiental del sistema.
-- **IEC 60529 (IP Rating)**: Evalúa qué tan resistente es el hardware al agua y al polvo.
-
-### 3. Diseño Electrónico
-- **IPC-2221**: Define buenas prácticas para diseñar circuitos electrónicos.
-- **IEC 61000-4-2**: Asegura que el sistema resista descargas electrostáticas y no falle en entornos hostiles.
-
-### 4. Programación y Software
-- **ISO/IEC 25010**: Evalúa la calidad del software, incluyendo su desempeño y facilidad de mantenimiento.
-- **Arduino Coding Standards**: Buenas prácticas para escribir código limpio y eficiente en C/C++.
-
-
-
-## Desarrollo Teórico Modular: Criterios de Diseño Establecidos
+### Desarrollo Teórico Modular: Criterios de Diseño Establecidos
 
 Para que el sistema sea eficiente y funcional, se definieron los siguientes criterios de diseño:
 
-### 1. Fiabilidad y Precisión
+#### 1. Fiabilidad y Precisión
 - Se seleccionaron sensores que brindan datos confiables sobre temperatura, gases y llamas.
-- Se implementarán filtros para reducir errores y evitar falsas alarmas.
+- Se implementarán límites y filtros dentro del código para reducir errores y evitar falsas alarmas.
 
-### 2. Bajo Consumo Energético
-- Se usan componentes de **bajo consumo**, lo que permite un mayor tiempo de operación.
-- El microcontrolador puede entrar en **modo de bajo consumo** cuando no detecta peligro.
-
-### 3. Autonomía y Mantenimiento Reducido
+#### 2. Autonomía y Mantenimiento Reducido
 - El sistema es **autosuficiente**, sin necesidad de conexión a redes externas.
 - Su diseño es resistente a la intemperie, minimizando la necesidad de mantenimiento.
 
-### 4. Interfaz de Usuario Intuitiva
-- Se usa una **pantalla LCD I2C** para mostrar datos en tiempo real.
+#### 3. Interfaz de Usuario Intuitiva
+- Se usa una **pantalla LCD ** para mostrar datos en tiempo real.
 - Se incluyen **alarmas sonoras (zumbador) y visuales (LED RGB)** para alertar sobre incendios.
 
-### 5. Escalabilidad y Modularidad
+#### 4. Escalabilidad y Modularidad
 - Se diseñó de forma **modular**, lo que facilita agregar nuevos sensores o funciones en el futuro.
-- En futuras versiones, se podría incluir conectividad remota para alertar a las autoridades de manera automática.
+- En futuras versiones, se podría incluir conectividad remota para alertar de manera automática.
+
+  
+## Estándares de Ingeniería Aplicados
+
+Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido los siguientes estándares de ingeniería:
+
+#### 1. Sensores y Electrónica
+- **IEEE 1451**: Establece reglas para la interoperabilidad de sensores en sistemas IoT.
+- **ISO 9001**: Asegura un proceso estructurado y de calidad en el desarrollo del sistema.
+
+
+#### 2. Programación y Software
+- **Arduino Coding Standards**: Buenas prácticas para escribir código limpio y eficiente en Arduino Ide.
 
 
 ---
