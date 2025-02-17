@@ -74,13 +74,13 @@ Al desarrollar el sistema IoT para detectar incendios en los cerros orientales d
 - Debe ser **autónomo y de bajo mantenimiento**, funcionando sin intervención constante.
 
 
-***Arquitectura propuesta***
+### Arquitectura propuesta
 
 A continuación, se presenta un diagrama de bloques que ilustra los elementos de hardware y software que conforman la solución IoT desarrollada.
 ![Diagrama de la arquitectura de la solución](diagramaBloques.png)
-*Figura 1: Arquitectura propuesta de IoT de la solución.*
+*Figura 1: Arquitectura IoT propuesta de la solución.*
 
-El sistema está basado en un Arduino UNO R3, el cual monitorea continuamente el entorno mediante un sensor de temperatura (DS18B20), un sensor de gas (MQ-2) y un sensor de llama. Las señales generadas por estos dispositivos son procesadas en el módulo de sensado, que recopila la información y la envía al módulo de procesamiento para analizar si las condiciones detectadas son seguras o representan un riesgo. En caso de alerta, el módulo de actuadores activa un LED RGB para indicar el estado y emite una señal sonora a través del buzzer, mientras que el módulo de visualización muestra en la pantalla LCD I2C la temperatura actual y el estado del lugar. De igual forma, toda la lógica de control está programada en C++ sobre Arduino, lo que permite que el sistema opere de manera autónoma y responda de forma inmediata a cualquier cambio en el ambiente.
+El sistema está basado en un **Arduino UNO R3**, el cual monitorea continuamente el entorno mediante un **sensor de temperatura (DS18B20)**, un **sensor de gas (MQ-2)** y un **sensor de llama**. Las señales generadas por estos dispositivos son procesadas en el **módulo de sensado**, que recopila la información y la envía al **módulo de procesamiento** para analizar si las condiciones detectadas son seguras o representan un riesgo. En caso de alerta, el **módulo de actuadores** activa un **LED RGB** para indicar el estado y emite una señal sonora a través del **buzzer**, mientras que el **módulo de visualización** muestra en la pantalla **LCD I2C**** la temperatura actual y el estado del lugar. De igual forma, toda la lógica de control está programada en C++ sobre Arduino, lo que permite que el sistema opere de manera autónoma y responda de forma inmediata a cualquier cambio en el ambiente.
 
 
 ### Desarrollo Teórico Modular: Criterios de Diseño Establecidos
