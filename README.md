@@ -97,7 +97,7 @@ Para que el sistema sea eficiente y funcional, se definieron los siguientes crit
 - En futuras versiones, se podría incluir conectividad remota para alertar de manera automática.
 
   
-## Estándares de Ingeniería Aplicados
+### Estándares de Ingeniería Aplicados
 
 Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido los siguientes estándares de ingeniería:
 
