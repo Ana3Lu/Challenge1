@@ -77,6 +77,7 @@ Al desarrollar el sistema IoT para detectar incendios en los cerros orientales d
 ### Arquitectura Propuesta
 
 A continuación, se presenta un Diagrama de Bloques que ilustra los elementos de hardware y software que conforman la solución IoT desarrollada.
+
 ![Diagrama de la arquitectura de la solución](diagramaBloques.png)
 *Figura 1: Arquitectura IoT propuesta de la solución.*
 
@@ -103,27 +104,15 @@ Para que el sistema sea eficiente y funcional, se definieron los siguientes crit
 - Se diseñó de forma **modular**, lo que facilita agregar nuevos sensores o funciones en el futuro.
 - En futuras versiones, se podría incluir conectividad remota para alertar de manera automática.
 
-  
-### Estándares de Ingeniería Aplicados
-
-Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido los siguientes estándares de ingeniería:
-
-#### 1. Sensores y Electrónica
-- **IEEE 1451**: Establece reglas para la interoperabilidad de sensores en sistemas IoT.
-- **ISO 9001**: Asegura un proceso estructurado y de calidad en el desarrollo del sistema.
-
-
-#### 2. Programación y Software
-- **Arduino Coding Standards**: Buenas prácticas para escribir código limpio y eficiente en Arduino Ide.
-
 
 ### Diagrama UML
 
 La siguiente figura ilustra el Diagrama de Actividad UML de la solución propuesta, en donde para visualizarlo de mejor forma se incluye un link adicional.
+
 ![Diagrama de actividades de la solución](DiagramaActividades.png)
 *Figura 2: Diagrama UML de actividades de la solución propuesta.*
 
-+ Link para mejor visualización del diagrama: https://www.canva.com/design/DAGfaAzHR50/iTku3yr3iAYa7nXp0wMO8w/view?utm_content=DAGfaAzHR50&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7452e3d912
+- ***Link para mejor visualización del diagrama:*** https://www.canva.com/design/DAGfaAzHR50/iTku3yr3iAYa7nXp0wMO8w/view?utm_content=DAGfaAzHR50&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7452e3d912
 
 Este diagrama de la solución propuesta representa el flujo de ejecución del sistema, abarcando desde la inicialización hasta la activación de los actuadores y la visualización de datos en la pantalla LCD. Para organizar mejor este proceso, el sistema se divide en cinco módulos: módulo principal, módulo de sensado, módulo de procesamiento, módulo de actuadores y módulo de visualización, cada uno desempeñando una función específica dentro del ciclo de monitoreo.
 
@@ -136,11 +125,26 @@ Si se detecta una alerta, el sistema activa el módulo de actuadores, encendiend
 
 En seguida, se muestra el diagrama que representa el Esquemático de Hardware de la solución planteada.
 ![Esquemático de hardware de la solución](EsquematicoHardware.png)
-*Figura 3: Diagrama UML de actividades de la solución propuesta.*
+*Figura 3: Esquemático de hardware de la solución propuesta.*
 
 En la simulación realizada en Wokwi, se utilizó un sensor de temperatura real; sin embargo, debido a la falta de disponibilidad de los sensores de gas y llama en la plataforma, se recurrió a la utilización de un potenciómetro para simular el sensor de gas y un botón para simular el sensor de llama. El potenciómetro se conectó a un pin analógico, lo que permitió ajustar manualmente el valor que representaba la concentración de gas. Por su parte, el botón actuó como un sensor de llama, generando una señal digital al presionarlo, lo que indicaba la presencia de una llama.
 
 El código fue diseñado para manejar tanto el sensor de temperatura como los componentes simulados, activando las alertas correspondientes según las lecturas obtenidas de cada uno. Posteriormente, al trasladar el proyecto a la implementación física, se montaron los tres sensores reales: el sensor de temperatura, el sensor de gas y el sensor de llama. Los sensores reales fueron conectados a los mismos pines definidos previamente en el código de la simulación. En este sentido, los cambios realizados en el código fueron mínimos, ya que solo se adaptaron las lecturas de los sensores físicos. De este modo, el comportamiento del sistema tanto en la simulación como en la implementación real se mantuvo consistente, lo que confirmó que el diseño inicial en la simulación era adecuado para la ejecución en hardware físico.
+
+
+### Estándares de Ingeniería Aplicados
+
+Para garantizar que el sistema desarrollado sea seguro, eficiente y cumpla con principios de calidad, se han aplicado diversos estándares de ingeniería:
+
+#### 1. Sensores y Electrónica
+- **IEEE 1451**: Establece reglas para la interoperabilidad de sensores en sistemas IoT.
+- **ISO 9001**: Establece un marco de gestión de calidad, garantizando un proceso estructurado en el desarrollo del sistema y la selección de componentes electrónicos confiables.
+
+#### 2. Programación y Software
+- **Arduino Coding Standards**: Conjunto de buenas prácticas para escribir código limpio y eficiente en Arduino IDE.
+
+### 3. Modelado y Documentación
+- **UML (ISO/IEC 19501)**: – Lenguaje estandarizado para la representación visual de sistemas software y hardware.
 
 ---
 
