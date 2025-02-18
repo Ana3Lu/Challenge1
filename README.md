@@ -225,8 +225,8 @@ Uno de los principales logros del proyecto fue la correcta integración de los s
 ### Retos Presentados Durante el Desarrollo del Proyecto
 Durante el desarrollo del proyecto, se enfrentaron varios retos técnicos y de diseño, entre los cuales se destacan:
 - **Calibración de sensores:** Asegurar la precisión de los sensores, especialmente el MQ-2, que puede verse afectado por factores ambientales.
--**Integración en Arduino IDE:** La programación y configuración de los sensores en el entorno Arduino IDE presentó dificultades, especialmente en la correcta lectura de valores y la sincronización con los actuadores. Fue necesario probar diferentes bibliotecas y ajustar parámetros para garantizar lecturas estables.
--**Optimización del código:** Se debió optimizar el código para minimizar latencias en la detección de eventos y evitar falsas alarmas, asegurando un desempeño eficiente en un entorno con recursos limitados como el Arduino Uno R3.
+- **Integración en Arduino IDE:** La programación y configuración de los sensores en el entorno Arduino IDE presentó dificultades, especialmente en la correcta lectura de valores y la sincronización con los actuadores. Fue necesario probar diferentes bibliotecas y ajustar parámetros para garantizar lecturas estables.
+- **Optimización del código:** Se debió optimizar el código para minimizar latencias en la detección de eventos y evitar falsas alarmas, asegurando un desempeño eficiente en un entorno con recursos limitados como el Arduino Uno R3.
 - **Simulación en Wokwi:** La plataforma presentó limitaciones en la emulación precisa del comportamiento de algunos sensores, lo que requirió ajustes en el código y pruebas adicionales.
 
 ### Trabajo Futuro
