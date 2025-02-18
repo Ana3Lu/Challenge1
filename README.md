@@ -206,6 +206,29 @@ Para mejorar la fiabilidad y precisión del sistema, se recomienda la implementa
 
 ## 6. Conclusiones, Retos y Mejoras Futuras
 
+
+### Conclusiones
+El desarrollo de un sistema IoT para la detección de incendios en los cerros orientales de Bogotá demostró la viabilidad de implementar soluciones autónomas y compactas para la prevención de desastres naturales. A lo largo del proceso, se logró integrar sensores de temperatura (DS18B20), detección de llamas y gases (MQ-2) con actuadores como un buzzer, un LED RGB y una pantalla LCD I2C para notificaciones en tiempo real. La simulación en Wokwi permitió evaluar el comportamiento del sistema sin necesidad de hardware físico, facilitando la validación de su funcionalidad antes de una implementación real.
+
+Uno de los principales logros del proyecto fue la correcta integración de los sensores y actuadores, asegurando una respuesta eficiente ante la detección de condiciones de riesgo. Además, el diseño del sistema priorizó la autonomía, eliminando la dependencia de redes externas para garantizar su operatividad en entornos remotos.
+
+### Retos Presentados Durante el Desarrollo del Proyecto
+Durante el desarrollo del proyecto, se enfrentaron varios retos técnicos y de diseño, entre los cuales se destacan:
+- **Calibración de sensores:** Asegurar la precisión de los sensores, especialmente el MQ-2, que puede verse afectado por factores ambientales.
+-**Integración en Arduino IDE:** La programación y configuración de los sensores en el entorno Arduino IDE presentó dificultades, especialmente en la correcta lectura de valores y la sincronización con los actuadores. Fue necesario probar diferentes bibliotecas y ajustar parámetros para garantizar lecturas estables.
+-**Optimización del código:** Se debió optimizar el código para minimizar latencias en la detección de eventos y evitar falsas alarmas, asegurando un desempeño eficiente en un entorno con recursos limitados como el Arduino Uno R3.
+- **Simulación en Wokwi:** La plataforma presentó limitaciones en la emulación precisa del comportamiento de algunos sensores, lo que requirió ajustes en el código y pruebas adicionales.
+
+### Trabajo Futuro
+Para mejorar y expandir el sistema, se identifican varias áreas de trabajo futuro:
+- **Incorporación de conectividad inalámbrica:** Integrar módulos para enviar alertas a estaciones remotas o a brigadas de emergencia.
+- **Uso de inteligencia artificial:** Aplicar algoritmos de machine learning para mejorar la precisión en la detección de incendios y reducir falsas alarmas.
+- **Implementación de un prototipo físico:** Construcción y prueba en campo de una versión funcional del sistema para validar su desempeño en condiciones reales.
+- **Ampliación del sistema de monitoreo:** Incorporar sensores adicionales, como de humedad y velocidad del viento, para mejorar la detección de riesgos ambientales.
+
+En conclusión, el proyecto representa un primer paso en la creación de soluciones tecnológicas para la prevención de incendios forestales. La implementación futura de mejoras permitirá fortalecer su efectividad y aplicabilidad en escenarios reales, contribuyendo a la protección del ecosistema de los cerros orientales de Bogotá.
+
+
 ---
 
 ## 7. Referencias
