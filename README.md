@@ -119,10 +119,16 @@ Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido 
 
 ### Diagrama UML
 
-La siguiente figura ilustra el diagrama de actividades de la solución propuesta, donde por motivos de tamaño también se incluye un link para poder visualizarlo de mejor forma.
+La siguiente figura ilustra el Diagrama de Actividad UML de la solución propuesta, en donde para visualizarlo de mejor forma se incluye un link adicional.
 ![Diagrama de actividades de la solución](DiagramaActividades.png)
 *Figura 2: Diagrama UML de actividades de la solución propuesta.*
+Link para mejor visualización: https://www.canva.com/design/DAGfaAzHR50/iTku3yr3iAYa7nXp0wMO8w/view?utm_content=DAGfaAzHR50&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7452e3d912
 
+Este diagrama de la solución propuesta representa el flujo de ejecución del sistema, abarcando desde la inicialización hasta la activación de los actuadores y la visualización de datos en la pantalla LCD. Para organizar mejor este proceso, el sistema se divide en cinco módulos: módulo principal, módulo de sensado, módulo de procesamiento, módulo de actuadores y módulo de visualización, cada uno desempeñando una función específica dentro del ciclo de monitoreo.
+
+El proceso comienza en el módulo principal, donde se configuran los pines de entrada y salida, se inicializa la pantalla LCD y el sensor de temperatura, y se establecen las variables de estado. A continuación, en el módulo de sensado, el sistema recoge información de los sensores de temperatura (DS18B20), gas (MQ-2) y llama, asegurando una medición precisa del entorno. Luego, estos datos se transfieren al módulo de procesamiento, el cual los analiza para determinar si las condiciones son seguras o si es necesario activar una alerta. Para ello, se aplican reglas de decisión basadas en umbrales predefinidos, clasificando la situación en tres posibles estados: normal, alerta (indicando en pantalla el problema detectado) o incendio.
+
+Si se detecta una alerta, el sistema activa el módulo de actuadores, encendiendo el LED RGB (en rojo o verde, según el nivel de riesgo) y activando o desactivando el buzzer para generar una advertencia sonora. Al mismo tiempo, el módulo de visualización actualiza la pantalla LCD, mostrando la temperatura actual junto con un mensaje que indica el estado del sistema. Finalmente, una vez completadas todas estas acciones, el sistema espera 500 ms antes de repetir el ciclo, permitiendo un monitoreo constante y en tiempo real.
 
 ---
 
