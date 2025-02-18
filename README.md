@@ -117,6 +117,13 @@ Para asegurar que el sistema sea seguro, eficiente y de calidad, se han seguido 
 - **Arduino Coding Standards**: Buenas prácticas para escribir código limpio y eficiente en Arduino Ide.
 
 
+### Diagrama UML
+
+La siguiente figura ilustra el diagrama de actividades de la solución propuesta, donde por motivos de tamaño también se incluye un link para poder visualizarlo de mejor forma.
+![Diagrama de actividades de la solución](DiagramaActividades.png)
+*Figura 2: Diagrama UML de actividades de la solución propuesta.*
+
+
 ---
 
 ## 4. Configuración Experimental, Resultados y Análisis
