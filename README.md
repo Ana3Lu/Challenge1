@@ -143,12 +143,22 @@ Para garantizar que el sistema desarrollado sea seguro, eficiente y cumpla con p
 #### 2. Programación y Software
 - **Arduino Coding Standards**: Conjunto de buenas prácticas para escribir código limpio y eficiente en Arduino IDE.
 
-### 3. Modelado y Documentación
+#### 3. Modelado y Documentación
 - **UML (ISO/IEC 19501)**: – Lenguaje estandarizado para la representación visual de sistemas software y hardware.
 
 ---
 
 ## 4. Configuración Experimental, Resultados y Análisis
+<p align="justify">
+Para comprobar el correcto funcionamiento del sistema, se llevó a cabo una prueba experimental en el laboratorio, donde ya se contaba con todos los elementos necesarios para la validación del prototipo. A diferencia del esquemático inicial, en esta etapa se integraron todos los sensores y actuadores, incluyendo el sensor de temperatura (DS18B20), el sensor de gas (MQ-2), el sensor de llama, el LED RGB, el buzzer y la pantalla LCD I2C. El circuito fue montado en una protoboard, utilizando jumpers, una resistencia de 4,7 kΩ para el sensor de temperatura y una resistencia de 220 Ω para el LED RGB. Posteriormente, el Arduino UNO R3 se conectó a la computadora mediante USB, permitiendo la carga y ejecución del código en Arduino IDE. Con el hardware ensamblado, el sistema comenzó a operar en un ambiente controlado, donde la temperatura ambiente se mantenía entre 21 y 22 °C, asegurando condiciones iniciales estables antes de realizar las pruebas.
+
+Para evaluar la respuesta del sistema ante una posible situación de incendio, se utilizó un encendedor a gas como herramienta de prueba para los tres sensores involucrados. Primero, se dejó escapar gas sin encender la llama para que el sensor de gas (MQ-2) detectara el aumento en la concentración de partículas inflamables. Luego, se encendió el encendedor y se acercó la llama tanto al sensor de llama como al sensor de temperatura (DS18B20). Esto permitió medir la capacidad del sistema para registrar el incremento de temperatura y la detección directa de fuego. La prueba se repitió varias veces, asegurando que el sistema respondiera de manera consistente ante los estímulos aplicados.
+
+Durante la ejecución, el código—el cual se encuentra en los anexos—operó en un ciclo continuo, iniciando con la lectura de sensores, donde se capturaban datos de temperatura, estado de la llama y concentración de gas. Posteriormente, en la función de manejo de alertas, estos valores se comparaban con los umbrales predefinidos para determinar si la situación correspondía a un estado normal, una alerta o una situación de incendio. Las condiciones evaluadas incluían un cambio brusco de temperatura o un valor superior a 22.8 °C, la detección de una llama y una concentración de gas superior a 750 (este valor se estableció tras realizar múltiples pruebas en las que se compararon las mediciones del sensor al detectar la presencia de la llama, identificando que a partir de dicho umbral la detección era consistente).
+
+De acuerdo con lo anterior, si se cumplía al menos una de estas condiciones, el sistema entraba en estado de alerta. En caso de que la detección de llama coincidiera con niveles elevados de gas o temperatura, la alerta se priorizaba como incendio, generando una respuesta casi inmediata. Tras la clasificación del evento, el módulo de actuadores reaccionaba en consecuencia. En estado normal, el LED RGB permanecía en verde y el buzzer se mantenía apagado. En cambio, al detectar una alerta o incendio, el LED cambiaba a rojo y el buzzer se activaba, proporcionando una señal visual y sonora que advertía sobre el peligro detectado.
+
+Finalmente, los resultados experimentales confirmaron que el sistema operó conforme a lo esperado, validando la precisión de los sensores y la correcta ejecución del código. En cada repetición de la prueba, los sensores registraron adecuadamente los cambios en el entorno, las alertas se activaron según los parámetros programados y los actuadores reflejaron el estado del sistema en tiempo real. Además, la lógica implementada en el código permitió una priorización eficiente de eventos críticos, asegurando que situaciones de mayor riesgo fueran alertadas a mismo tiempo. Asimismo, se verificó que los tiempos de respuesta fueron óptimos, cumpliendo con la duración establecida en el código para la activación de cada alerta.
 
 ---
 
