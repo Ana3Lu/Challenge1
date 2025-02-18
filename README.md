@@ -251,5 +251,193 @@ En conclusión, el proyecto representa un primer paso en la creación de solucio
 
 ## 8. Anexos
 
+#### Código fuente
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+// ========================== DEFINICIÓN DE PINES ==========================
+
+// Pines de los sensores
+#define TEMP_SENSOR_PIN 2   // Pin digital para el sensor de temperatura DS18B20
+#define FLAME_SENSOR_PIN 3  // Pin digital para el sensor de llama
+#define GAS_SENSOR_PIN A0   // Pin analógico para el sensor de gas MQ-2
+
+// Pines de los actuadores
+#define BUZZER_SENSOR_PIN 4 // Pin digital para el zumbador
+#define LED_RED_PIN 5       // Pin digital para componente rojo del LED RGB
+#define LED_GREEN_PIN 6     // Pin digital para componente verde del LED RGB
+
+// ========================== PARÁMETROS DEL SISTEMA ==========================
+
+#define MAX_TEMPS 5  // Número de muestras de temperatura almacenadas
+
+// Configuración de la pantalla LCD I2C (16x2)
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Configuración del sensor de temperatura
+OneWire oneWire(TEMP_SENSOR_PIN);
+DallasTemperature sensors(&oneWire);
+
+// Umbrales de alerta
+const float TEMP_LIMITE = 22.8;               // Temperatura máxima permitida antes de alerta
+const float TEMP_AUMENTO_RAPIDO = 0.5;        // Incremento rápido de temperatura en °C 
+const int GAS_LIMITE = 750;                   // Límite de concentración de gas
+
+// Tiempos de duración de alertas
+const unsigned long DURACION_ALERTA = 3000;   // Duración de alerta estándar (ms)
+const unsigned long DURACION_INCENDIO = 8000; // Duración de alerta por incendio (ms
+
+// Variables de almacenamiento de temperatura
+float temperaturas[MAX_TEMPS] = {20.0, 20.0, 20.0, 20.0, 20.0};  // Inicializa con 20°C
+int indice = 0;                                                  // Índice de la próxima lectura a almacenar
+
+// Variables de tiempo para alertas
+unsigned long tiempoAlerta = 0;                // Guarda el tiempo de inicio de la alerta
+unsigned long tiempoIncendio = 0;              // Guarda el tiempo de inicio de la alerta de incendio
+
+String mensaje = "Estado Normal";              // Inicializa mensaje de alerta del LCD con estado normal
+
+// ========================== CONFIGURACIÓN INICIAL ==========================
+
+void setup() {
+  // Configuración de pines de salida
+  pinMode(BUZZER_SENSOR_PIN, OUTPUT);
+  pinMode(LED_RED_PIN, OUTPUT);
+  pinMode(LED_GREEN_PIN, OUTPUT);
+  pinMode(FLAME_SENSOR_PIN, INPUT);
+
+  // Inicialización del LCD y sensores
+  lcd.begin(16, 2);
+  lcd.backlight();
+  sensors.begin();
+
+   // Mensaje de inicio en LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Sistema Alerta");
+  lcd.setCursor(0, 1);
+  lcd.print("Iniciando...");
+  delay(2000);
+  lcd.clear();
+}
+
+// ========================== LECTURA DE SENSORES ==========================
+// Captura los valores de los sensores de temperatura, llama y gas.
+void leerSensores(float &temperature, int &flameState, int &gasValue) {
+  // Leer temperatura
+  sensors.requestTemperatures();
+  temperature = sensors.getTempCByIndex(0); 
+
+  // Leer estado del sensor de llama (0 indica llama detectada)
+  flameState = digitalRead(FLAME_SENSOR_PIN);
+
+  // Leer nivel del sensor de gas
+  gasValue = analogRead(GAS_SENSOR_PIN);
+}
+
+// ========================== MANEJO DE ALERTAS ==========================
+// Analiza los valores de los sensores y determina si se activa una alerta.
+void manejarAlertas(float temperature, int flameState, int gasValue, float incremento, unsigned long tiempoActual, unsigned long &tiempoAlerta, unsigned long &tiempoIncendio, bool &alerta, bool &esIncendio, String &mensaje) {
+  
+  // Evaluar condición de temperatura
+  if (incremento >= TEMP_AUMENTO_RAPIDO || temperature >= TEMP_LIMITE) {
+    alerta = true;
+    tiempoAlerta = tiempoActual;
+    mensaje = "ALERTA: Temp alta!";
+  }
+
+  // Evaluar condición de llama
+  if (flameState == LOW) {
+    alerta = true;
+    tiempoAlerta = tiempoActual;
+    mensaje = "ALERTA: Llama!";
+  }
+
+  // Evaluar condición de gas
+  if (gasValue > GAS_LIMITE) {
+    alerta = true;
+    tiempoAlerta = tiempoActual;
+    mensaje = "ALERTA: Gas!";
+  }
+
+  // Lógica de prioridad de alerta (si hay llama y gas o temperatura alta, se considera incendio)
+  if ((flameState == LOW && gasValue > GAS_LIMITE) ||
+      (flameState == LOW && incremento >= TEMP_AUMENTO_RAPIDO) ||
+      (flameState == LOW && temperature >= TEMP_LIMITE)) {
+    esIncendio = true;
+    tiempoIncendio = tiempoActual;
+    mensaje = "ALERTA: INCENDIO";
+  }
+}
+
+// ========================== ACTUALIZACIÓN DEL LCD ==========================
+// Muestra en la pantalla la temperatura y el estado actual.
+void actualizarLCD(float temperature, String mensaje) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Temp:");
+  lcd.print(temperature);
+  lcd.print("C");
+
+  lcd.setCursor(0, 1);
+  lcd.print(mensaje);
+}
+
+// ========================== CONTROL DE ACTUADORES ==========================
+// Activa o desactiva el LED RGB y el buzzer según el estado del sistema.
+void manejarActuadores(bool alerta) {
+  if (alerta) {
+    digitalWrite(LED_RED_PIN, LOW);       // Encender LED rojo
+    digitalWrite(LED_GREEN_PIN, HIGH);    // Apagar LED verde
+    digitalWrite(BUZZER_SENSOR_PIN, LOW); // Activar zumbador
+  } else {
+    digitalWrite(LED_RED_PIN, HIGH);        // Apagar LED rojo
+    digitalWrite(LED_GREEN_PIN, LOW);       // Encender LED verde
+    digitalWrite(BUZZER_SENSOR_PIN, HIGH);  // Apagar zumbador
+  }
+}
+
+// ========================== BUCLE PRINCIPAL ==========================
+// Ejecuta la lógica de monitoreo continuamente.
+void loop() {
+  // Variables de almacenamiento de valores de sensores
+  float temperature;
+  int flameState;
+  int gasValue;
+  unsigned long tiempoActual = millis();
+  bool alerta = false;
+  bool esIncendio = false;
+  String mensaje = "Estado Normal";
+
+  // Leer los valores de los sensores
+  leerSensores(temperature, flameState, gasValue);
+
+  // Calcular el cambio en temperatura
+  float incremento = temperaturas[MAX_TEMPS - 1] - temperaturas[0];
+
+  // Determinar si se debe activar una alerta
+  manejarAlertas(temperature, flameState, gasValue, incremento, tiempoActual, tiempoAlerta, tiempoIncendio, alerta, esIncendio, mensaje);
+
+  // Mantener alerta activa por el tiempo definido
+  if (tiempoActual - tiempoAlerta < DURACION_ALERTA || tiempoActual - tiempoIncendio < DURACION_INCENDIO) {
+    alerta = true;
+    if (tiempoActual - tiempoIncendio < DURACION_INCENDIO) {
+      mensaje = "ALERTA: INCENDIO";
+    }
+  } else {
+    mensaje = "Estado Normal";
+  }
+
+  // Mostrar en LCD el estado actual
+  actualizarLCD(temperature, mensaje);
+
+  // Controlar los actuadores (LED y buzzer)
+  manejarActuadores(alerta);
+
+  delay(500); // Esperar antes de la siguiente iteración
+}
+
 ```
 
